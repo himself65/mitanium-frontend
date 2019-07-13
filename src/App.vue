@@ -1,9 +1,9 @@
 <template>
   <div id="app">
     <v-app>
-      <SideNav class="site-side-nav" app />
+      <SideNav class="site-side-nav" app/>
       <v-content class="site-content" app>
-        <RouterView class="fill-height" />
+        <RouterView class="fill-height"/>
       </v-content>
       <v-btn
         v-show="!$vuetify.breakpoint.lgAndUp" bottom right
@@ -19,15 +19,15 @@
   </div>
 </template>
 <script>
-  import SideNav from '@/layout/SideNav'
+import SideNav from '@/layout/SideNav'
 
-  export default {
-    components: { SideNav },
-    async beforeCreate () {
-      // updateCurrentUser
-      await this.$store.dispatch('global/updateCurrentUser')
-    }
+export default {
+  components: { SideNav },
+  async beforeCreate () {
+    // todo
+    // await this.$store.dispatch('global/updateCurrentUser')
   }
+}
 </script>
 
 <style lang="stylus">
