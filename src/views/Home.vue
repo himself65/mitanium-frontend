@@ -14,7 +14,7 @@
         </template>
       </display-list>
       <div slot="side">
-        <h3 class="side">
+        <h3 class="subheading">
           筛选
         </h3>
       </div>
@@ -64,14 +64,6 @@ export default {
   .post-markdown {
     >>> img {
       width 100%
-    }
-  }
-
-  .side {
-    @extend .display-1
-
-    @media $display-breakpoints.sm-and-down {
-      @extend .subheading
     }
   }
 </style>
