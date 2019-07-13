@@ -1,7 +1,5 @@
 const webpackConfig = require('./build/webpack.dev.config')
 
-const isMock = process.env.TARGET === 'mock'
-
 module.exports = {
   assetsDir: 'public',
 
@@ -15,6 +13,6 @@ module.exports = {
   },
 
   devServer: {
-    proxy: `http://localhost:300${isMock ? 1 : 0}`
+    proxy: `http://localhost:3000`
   }
 }
