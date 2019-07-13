@@ -1,8 +1,8 @@
+const path = require('path')
 const express = require('express')
+
 const app = express()
-
-app.get(/\/api\/checkin/, require('./checkin'))
-
-app.listen(3001, function () {
-  console.log('Mock load success on port 3001!')
+app.use(express.static(path.resolve(__dirname, '../', 'dist')))
+app.listen(3000, function () {
+  console.log('Mock load success on port 3000!')
 })

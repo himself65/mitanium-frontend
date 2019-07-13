@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "build": "vue-cli-service build --name mitanium-website --modern",
-    "dev:mock": "concurrently \" cross-env DEV_TARGET=mock vue-cli-service serve \" \" nodemon mock/index.js \" ",
+    "watch": "yarn build --watch",
+    "dev:mock": "concurrently \" cross-env DEV_TARGET=mock yarn watch \" \" nodemon mock/index.js \" ",
     "serve": "vue-cli-service serve --watch",
     "lint": "vue-cli-service lint"
   },
@@ -35,6 +36,8 @@
     "@vue/cli-service": "^3.9.0",
     "@vue/eslint-config-standard": "^4.0.0",
     "babel-eslint": "^10.0.1",
+    "concurrently": "^4.1.1",
+    "cross-env": "^5.2.0",
     "eslint": "^5.16.0",
     "eslint-plugin-vue": "^5.0.0",
     "express": "^4.17.1",
