@@ -10,16 +10,7 @@
     app
   >
     <v-list>
-      <v-btn
-        class="site-logo"
-        to="/"
-        flat
-        icon
-      >
-        <v-avatar>
-          <v-img :src="require('../../public/img/icons/ms-icon-144x144.png')" />
-        </v-avatar>
-      </v-btn>
+      <v-toolbar-side-icon></v-toolbar-side-icon>
       <v-spacer />
       <div v-if="hugeDisplay" class="side-nav-items">
         <v-tooltip
@@ -77,7 +68,7 @@ export default {
     return {
       mini: true,
       items: [
-        { name: '关于', href: '/about', icon: 'fas fa-info' }
+        { name: '关于', href: '/about', icon: 'info' }
       ]
     }
   },
