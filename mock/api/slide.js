@@ -8,7 +8,9 @@ const regex = /chapter_[0-9]\.js/
 const breakpoints = fs.readdirSync(dir).map(file => regex.test(file) ? file : false)
   .filter(v => v).map((item, index) => {
     return {
+      id: index,
       title: `第 ${index} 章`,
+      description: '',
       content: fs.readFileSync(path.resolve(dir, item), 'utf-8')
     }
   })
