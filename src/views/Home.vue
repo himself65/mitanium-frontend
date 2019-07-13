@@ -48,6 +48,7 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
+  @import "~vuetify/src/stylus/bootstrap.styl"
   @import "~vuetify/src/stylus/elements/_typography.styl"
 
   .lists {
