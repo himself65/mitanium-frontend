@@ -13,6 +13,6 @@ instance.interceptors.request.use(config => {
 })
 export default instance
 
-export * from './article'
-export * from './user'
-export * from './talk'
+export function getSlide () {
+  return axios.get('/api/slide')
+}

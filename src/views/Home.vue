@@ -2,48 +2,34 @@
   <div>
     <toolbar />
     <width-wrap>
-      <display-list
-        slot="main" class="lists"
-        url="/api/slide"
-      >
-        <template slot="card" slot-scope="article">
-          <v-card :key="article._id" class="item">
+      <display-list slot="main" class="lists">
+        <template slot="card" slot-scope="item">
+          <v-card :key="item.id" class="item">
             <v-card-title primary-title>
               <div>
-                <h1 class="headline mb-0">
-                  {{ article.title }}
-                </h1>
-                <div class="grey--text">
-                  {{ article.author }} | {{ article.createdDate }}
-                </div>
-                <vue-markdown class="post-markdown" :source="article.content" />
+                <h3 class="headline mb-0">{{ item.title }}</h3>
               </div>
             </v-card-title>
-            <v-card-actions v-if="haveAccess(article)">
-              <v-btn
-                flat
-                color="accent"
-                :to="'/article/'+article._id+'/edit'"
-              >
-                编辑
-              </v-btn>
-            </v-card-actions>
           </v-card>
         </template>
       </display-list>
+      <div slot="side">
+        <h3 class="display-1">
+          筛选
+        </h3>
+      </div>
     </width-wrap>
   </div>
 </template>
 
 <script>
-import VueMarkdown from 'vue-markdown'
 import WidthWrap from '../layout/WidthWrap'
 import Toolbar from '../layout/Toolbar'
 import DisplayList from '@/components/DisplayList'
 
 export default {
   name: 'Home',
-  components: { DisplayList, Toolbar, WidthWrap, VueMarkdown },
+  components: { DisplayList, Toolbar, WidthWrap },
   data () {
     return {
       talks: null

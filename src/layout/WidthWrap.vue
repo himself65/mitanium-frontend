@@ -44,14 +44,14 @@ export default {
 
     &--side {
       flex 1 0 0
-      margin-left 1.5rem
+      margin-left 0
     }
 
     @media $display-breakpoints.sm-and-down {
       flex-direction: column-reverse
 
       &--side {
-       margin-left 0
+       margin-left 1.5rem
       }
     }
   }
