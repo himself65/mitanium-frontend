@@ -4,7 +4,7 @@
     <width-wrap>
       <display-list
         slot="main" class="lists"
-        url="/api/articles"
+        url="/api/slide"
       >
         <template slot="card" slot-scope="article">
           <v-card :key="article._id" class="item">
