@@ -75,13 +75,14 @@ export default {
 
   methods: {
     async fetch () {
-      await axios.get(this.url, { params: { page: this._current } }).then(res => {
-        if (res && res.status === 200) {
-          const { data, total } = res.data
-          this.items = data
-          this.total = total
-        }
-      })
+      // fixme
+      // await axios.get(this.url, { params: { page: this._current } }).then(res => {
+      //   if (res && res.status === 200) {
+      //     const { data, total } = res.data
+      //     this.items = data
+      //     this.total = total
+      //   }
+      // })
     }
   }
 }

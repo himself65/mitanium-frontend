@@ -17,7 +17,7 @@
         icon
       >
         <v-avatar>
-          <img src="/img/icons/ms-icon-144x144.png">
+          <v-img :src="require('../../public/img/icons/ms-icon-144x144.png')" />
         </v-avatar>
       </v-btn>
       <v-spacer />
