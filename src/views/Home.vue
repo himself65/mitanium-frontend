@@ -14,7 +14,7 @@
         </template>
       </display-list>
       <div slot="side">
-        <h3 class="display-1">
+        <h3 class="side">
           筛选
         </h3>
       </div>
@@ -48,6 +48,8 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
+  @import "~vuetify/src/stylus/elements/_typography.styl"
+
   .lists {
     > div {
       margin-top 1rem
@@ -61,6 +63,14 @@ export default {
   .post-markdown {
     >>> img {
       width 100%
+    }
+  }
+
+  .side {
+    @extend .display-1
+
+    @media $display-breakpoints.sm-and-down {
+      @extend .subheading
     }
   }
 </style>

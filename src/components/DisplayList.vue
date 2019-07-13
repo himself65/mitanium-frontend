@@ -10,7 +10,7 @@
         <v-spacer/>
         <v-flex>
           <div class="text-xs-center">
-            <v-pagination :total-visible="5"/>
+            <v-pagination :length="total" :total-visible="5"/>
           </div>
         </v-flex>
       </template>
@@ -33,7 +33,8 @@ export default {
   data () {
     return {
       items: null,
-      title: ''
+      title: '',
+      total: 5
     }
   },
 
