@@ -9,8 +9,13 @@ import '@mdi/font/css/materialdesignicons.css'
 
 Vue.config.productionTip = false
 
-new Vue({
+const mitanium = new Vue({
   router,
   store,
   render: h => h(App)
 }).$mount('#app')
+
+mitanium.isLoaded || window.addEventListener('load', () => {
+  mitanium.isLoaded = true
+  console.log('Website load')
+})
