@@ -1,20 +1,17 @@
-const breakpoints = [
-  {
-    title: '01',
-    description: '未来科技有限公司',
-    content: 'console.log(\'1\')'
-  },
-  {
-    title: '02',
-    description: '未来科技有限公司',
-    content: 'console.log(\'2\')'
-  },
-  {
-    title: '033333333333333333333',
-    description: '未来科技有限公司',
-    content: 'console.log(\'3\')'
-  }
-]
+const fs = require('fs')
+const path = require('path')
+
+const dir = path.resolve(__dirname, '../../deps/Manim.js/Linear Regression')
+
+const regex = /chapter_[0-9]\.js/
+
+const breakpoints = fs.readdirSync(dir).map(file => regex.test(file) ? file : false)
+  .filter(v => v).map((item, index) => {
+    return {
+      title: `第 ${index} 章`,
+      content: fs.readFileSync(path.resolve(dir, item), 'utf-8')
+    }
+  })
 
 module.exports = (req, res) => {
   return res.json({
