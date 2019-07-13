@@ -2,21 +2,8 @@
   <div>
     <toolbar />
     <width-wrap>
-      <display-list slot="main" class="lists">
-        <template slot="card" slot-scope="item">
-          <v-card :key="item.id" class="item">
-            <v-card-title primary-title>
-              <div>
-                <h3 class="headline mb-0">{{ item.title }}</h3>
-              </div>
-            </v-card-title>
-          </v-card>
-        </template>
-      </display-list>
-      <div slot="side">
-        <h3 class="subheading">
-          筛选
-        </h3>
+      <div slot="main" class="main">
+        <DisplayCard />
       </div>
     </width-wrap>
   </div>
@@ -25,11 +12,11 @@
 <script>
 import WidthWrap from '../layout/WidthWrap'
 import Toolbar from '../layout/Toolbar'
-import DisplayList from '@/components/DisplayList'
+import DisplayCard from '@/components/DisplayCard'
 
 export default {
   name: 'Home',
-  components: { DisplayList, Toolbar, WidthWrap },
+  components: { DisplayCard, Toolbar, WidthWrap },
   data () {
     return {
       talks: null
@@ -65,5 +52,9 @@ export default {
     >>> img {
       width 100%
     }
+  }
+
+  .main {
+    height: 100%
   }
 </style>
