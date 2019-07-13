@@ -10,7 +10,7 @@ module.exports = {
   },
 
   pwa: {
-    name: 'Himself65',
+    name: 'mitanium',
     theme_color: '#6cb2eb'
   },
 

@@ -14,11 +14,6 @@ export const router = new VueRouter({
       component: () => import('views/Home.vue')
     },
     {
-      path: '/about',
-      name: 'about',
-      component: () => import('views/About.vue')
-    },
-    {
       path: '/user',
       name: 'user',
       component: () => import('views/User.vue')

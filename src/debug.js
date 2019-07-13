@@ -1,5 +1,5 @@
 import db from 'debug'
-import { appName } from 'config'
+import { name } from '../package'
 
-export const debug = db(appName)
+export const debug = db(name)
 export default debug
